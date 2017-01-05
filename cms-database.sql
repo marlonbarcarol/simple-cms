@@ -180,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user`, `password`, `name`, `email`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'teste', '$2y$10$4Qs3G4nz2L43Pm8KT7x3Wu2l78fw1sh6IzOBBaRRpDEYZDo3jb/fe', 'Teste', 'teste@teste.com.br', 'user', '2016-08-05 19:09:29', '2017-01-05 14:32:49');
+(1, 'test', '$2y$10$4Qs3G4nz2L43Pm8KT7x3Wu2l78fw1sh6IzOBBaRRpDEYZDo3jb/fe', 'Test', 'test@test.com.br', 'user', '2016-08-05 19:09:29', '2017-01-05 14:32:49');
 
 --
 -- Constraints for dumped tables
