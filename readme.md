@@ -32,10 +32,10 @@ Password: test123
 
 
 ### Laravel Requirements
-	- PHP >= 5.4, PHP < 7.
-	- Mcrypt PHP Extension.
-	- OpenSSL PHP Extension.
-	- Mbstring PHP Extension.
-	- Tokenizer PHP Extension.
+- PHP >= 5.4, PHP < 7.
+- Mcrypt PHP Extension.
+- OpenSSL PHP Extension.
+- Mbstring PHP Extension.
+- Tokenizer PHP Extension.
 
 - Advise to create a Virtual Host.
