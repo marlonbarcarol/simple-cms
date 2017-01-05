@@ -2,7 +2,7 @@
 Simples CMS is basically an API using Laravel and AngularJS for front end.
 
 ### Installing back-end(API)
-Access "api" folder and run the following commands:
+Access "api" folder and run the following command:
 
 ~~~
 composer install --dev
@@ -37,5 +37,6 @@ Password: test123
 - OpenSSL PHP Extension.
 - Mbstring PHP Extension.
 - Tokenizer PHP Extension.
+
 
 - Advise to create a Virtual Host.
