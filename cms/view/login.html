@@ -1,0 +1,11 @@
+<section id="login" ng-controller="loginCtrl">
+	<form class="form box" ng-submit="sendForm()">
+		<h1 class="text-center" style="margin-bottom: 0px;">CMS</h1>
+		<span class="text-center">Please insert your credentials.</span><br/><br/>
+		<div class="message" ng-show="message">{{ message }}</div>
+		<div class="spinner" ng-show="isLoading"></div>
+		<input class="text-center" type="text" ng-model="formData.user" name="user" placeholder="User" style="width: 100%;"><br/>
+		<input class="text-center" type="password" ng-model="formData.password" name="password" placeholder="Password" style="width: 100%;"><br/>
+		<button class="button" style="width: 100%;" ng-disabled="isLoading">Log In</button>
+	</form>
+</section>

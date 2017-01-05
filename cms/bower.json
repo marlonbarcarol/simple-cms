@@ -1,0 +1,29 @@
+{
+  "name": "base",
+  "version": "0.0.1",
+  "description": "base project",
+  "authors": [
+    "Marlon Barcarol"
+  ],
+  "license": "MIT",
+  "private": true,
+  "homepage": "www.marlonbarcarol.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.5",
+    "angular-route": "1.4.5",
+    "foundation": "5.5.2",
+    "jquery": "2.1.4",
+    "font-awesome": "fontawesome#4.4.0",
+    "jquery-mask-plugin": "git://github.com/igorescobar/jQuery-Mask-Plugin.git#1.13.4",
+    "ng-file-upload-shim": "~10.1.9",
+    "ng-file-upload": "~10.1.9",
+    "ckeditor": "^4.6.1"
+  }
+}

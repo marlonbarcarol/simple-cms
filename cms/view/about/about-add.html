@@ -1,0 +1,45 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="{{ url }}" class="add-view">
+			<h1 class="page-title">{{ module }}</h1>
+
+			<div class="box">
+				<h2 class="title">Preencha o formulário para adicionar a página</h2>
+				<form ng-submit="addRegistry(url, formData)">
+					<ul class="noList">
+						<li>
+							<input type="text" ng-model="formData.title" name="title" placeholder="Título da página" class="input-medium"> <span class="description">Preencha com o título da página.</span>
+						</li>
+						<li>
+							<br/><br/>
+							<!-- <textarea froala ng-model="formData.description"></textarea> -->
+							<span class="description">Fill out with page text.</span>
+							<div ck-editor ng-model="formData.description"></div>
+							<br/><br/>
+						</li>
+						<li>
+							<span class="description">Select page images.</span><br/>
+							<input type="file" id="files" ngf-select="onFileSelect()" ng-model="formData.files" name="files" ngf-accept="'image/*'" multiple>
+							<ul class="noList">
+								<li ng-repeat="file in formData.files" class="thumb">
+									<img ngf-src="file" class="img">
+									<span class="file-name">{{ file.name }}</span>
+									<input type="text" ng-model="file.subtitle" placeholder="Subtitle" class="input-large">
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<br/>
+
+					<button class="button success">Add</button>
+					<a href="javascript: window.history.back()" class="button">Cancel</a>
+				</form>
+				<div class="message"></div>
+			</div>
+		</section>
+
+	</main>
+</div>

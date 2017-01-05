@@ -1,0 +1,224 @@
+$font-bold: 700;
+$font-normal: 400;
+$font-thin: 300;
+
+$flag-green: #009246;
+$flag-red: #CE2B37;
+
+@mixin vertical-align-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+@mixin vertical-align {
+    display: block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin backgroundGradient($firstColor, $secondColor){
+    background: $firstColor;
+    background: -moz-linear-gradient(top, $firstColor 0%, $secondColor 100%);
+    background: -webkit-linear-gradient(top, $firstColor 0%,$secondColor 100%);
+    background: linear-gradient(to bottom, $firstColor 0%,$secondColor 100%);
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+	color: #000;
+}
+
+body {
+	background: #f7f7f7;
+    color: #404040;
+    cursor: auto;
+    font-family: Helvetica, Roboto, Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #4A4A4A;
+	font-family: Helvetica, Roboto, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.4;
+	margin: 0px;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: #000;
+	line-height: inherit;
+	text-decoration: none;
+
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.noMargin { margin: 0px }
+.input-small { width: 25% }
+.input-medium { width: 50% }
+.input-large { width: 100% }
+
+.absolute-center {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#page-wrapper { min-height: 100% }
+
+#page { 
+    padding-top: 20px;
+    z-index: 100;
+}
+
+.box {
+    padding: 10px 10px;
+    margin-top: 30px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.5);
+    background-color: #fff;
+    
+    .title {
+        border-bottom: 2px solid #4A4A4A;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+.button {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    margin: 0px;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #008CBA;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.5);
+    color: #fff;
+    transition: all 200ms ease-in;
+
+    &:hover {
+        color: #fff;
+        box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.5);            
+        text-decoration: none;
+    }
+
+    &.alert {
+        background-color: #ff0000;
+    }
+
+    &.success {
+        background-color: #1D8A1D;
+    }
+
+}
+
+input,
+textarea { 
+    border: 0px;
+    outline: 0px;
+    border-bottom: 1px #c3c3c3 solid;
+    margin-bottom: 15px;
+    padding: 5px 0px;
+    font-size: 15px;
+
+    font-family: Helvetica, Roboto, Arial, sans-serif 
+}
+
+.row { max-width: 75rem }
+.row .row { 
+    margin: auto;
+    max-width: initial;
+    width: auto;
+}
+
+.noList {
+    padding: 0px;
+    margin: 0px;
+    font-size: 0;
+    list-style: none;
+
+    li {
+        font-size: 14px;
+    }
+}
+
+.message {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+
+    &.success {
+        background-color: #12AF12;
+    }
+
+    &.alert {
+        background-color: #CE362F;
+    }
+
+}
+
+
+.spinner {
+    position: fixed;
+    z-index: 100;
+    top: 0px; right: 0px; bottom: 0px;  left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(img/loading.gif) no-repeat center center rgba(0,0,0,0.7);
+}
+
+.route-loading { float: left }
+
+.menu-bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    width: 225px;
+    background: #252323;
+    height: 100%;
+}

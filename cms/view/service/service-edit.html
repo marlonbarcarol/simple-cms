@@ -1,0 +1,47 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="{{ url }}-edit" class="add-view">
+			<h1 class="page-title">{{ module }}</h1>
+
+			<div class="box">
+				<h2 class="title">Fill out the form to edit the page</h2>
+				<form ng-submit="editRegistry(url, registry)">
+					<ul class="noList">
+						<li>
+							<input type="text" ng-model="registry.title" name="title" placeholder="Title" class="input-medium"> <span class="description">Insert title.</span>
+						</li>
+						<li>
+							<input type="text" ng-model="registry.summary" name="summary" placeholder="Summary" class="input-large"> <span class="description">Insert summary.</span>
+						</li>
+						<li>
+							<br/><br/>
+							<div ck-editor ng-model="registry.description">
+								<span style="font-weight: bold;">Insert here the content!</span>
+							</div>
+							<br/><br/>
+						</li>
+						<li>
+							<span class="description">Select the images for the page.</span><br/>
+							<input type="file" id="files" ngf-select="onFileSelect($files)" ng-model="registry.files" name="files" ngf-accept="'image/*'" multiple>
+							<ul class="noList">
+								<li ng-repeat="file in registry.files" class="thumb">
+									<img ngf-src="file.path || file " class="img">
+									<span class="file-name">{{ file.arquivo || file.name }}</span>
+									<input type="text" ng-model="file.subtitle" placeholder="Subtitle" class="input-large">
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<br/>
+					<button class="button success">Edit</button>
+					<a href="javascript: window.history.back()" class="button">Cancel</a>
+				</form>
+				<div class="message"></div>
+			</div>
+		</section>
+
+	</main>
+</div>

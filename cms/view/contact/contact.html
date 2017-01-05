@@ -1,0 +1,43 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="{{ url }}" class="list-view">
+			<h1 class="page-title">{{ module }}</h1>
+			<div class="row list box">
+				<div class="small-12">
+					<h2 class="title">Registered Contacts</h2>
+				</div>
+				<table class="table small-12">
+					<thead>
+						<tr>
+							<th class="text-center">#</th>
+							<th class="text-left">Name</th>
+							<th class="text-left">Phone</th>
+							<th class="text-left">E-mail</th>
+							<th class="text-left">Creation date</th>
+							<th class="text-center">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="registry in registries">
+							<td class="text-center">
+								<input type="checkbox" name="select" class="noMargin">
+							</td>
+							<td class="text-left">{{ registry.name }}</td>
+							<td class="text-left">{{ registry.phone }}</td>
+							<td class="text-left">{{ registry.email }}</td>
+							<td class="text-left"> {{ registry.created_at }}</td>
+							<td class="text-center">
+								<a href="{{ url }}/{{ registry.id }}" class="editar" title="Details"><i class="fa fa-eye"></i></a>
+								<a href="{{ url }}/{{ registry.id }}" class="editar" title="Remove" delete id="{{ registry.id }}" url="{{ url }}"><i class="fa fa-trash"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+	</main>
+</div>

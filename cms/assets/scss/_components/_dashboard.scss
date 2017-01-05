@@ -1,0 +1,30 @@
+#dashboard {
+
+	.navigation {
+		display: block;
+		width: 100%;
+		padding: 25px 10px;
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: 16px;
+		box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.5);
+		text-transform: uppercase;
+
+		&:hover {
+			box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.5);
+			text-decoration: none!important;
+		}
+
+		.text {
+			display: block;
+			padding: 15px 0px 0px 0px;
+			font-weight: bold;
+		}
+
+		.fa {
+			color: #3B4579;
+			font-size: 28px;
+		}
+	}
+	
+}

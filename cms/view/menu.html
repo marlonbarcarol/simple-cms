@@ -1,0 +1,24 @@
+<nav class="navigation clearfix">
+	<h1 class="user">
+		<i class="fa fa-users"></i> 
+		Hello {{ user.name }}!
+	</h1>
+	<a href="logout" id="logout">Log off</a>
+	<ul class="menu noList">
+		<li class="item" ng-class="(module == 'Dashboard') ? 'selected' : '' ">
+			<a href="index.html" class="link"><i class="fa fa-angle-double-right"></i>Dashboard</a>
+		</li>
+		<li class="item" ng-class="(module == 'About') ? 'selected' : '' ">
+			<a href="about" class="link"><i class="fa fa-angle-double-right"></i>About</a>
+		</li>
+		<li class="item" ng-class="(module == 'Services') ? 'selected' : '' ">
+			<a href="service" class="link"><i class="fa fa-angle-double-right"></i>Services</a>
+		</li>
+		<li class="item" ng-class="(module == 'Contacts') ? 'selected' : '' ">
+			<a href="contact" class="link"><i class="fa fa-angle-double-right"></i>Contacts</a>
+		</li>
+		<li class="item" ng-class="(module == 'Users') ? 'selected' : '' ">
+			<a href="user" class="link"><i class="fa fa-angle-double-right"></i>Users</a>
+		</li>
+	</ul>
+</nav>

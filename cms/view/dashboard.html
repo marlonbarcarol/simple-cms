@@ -1,0 +1,48 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+	
+		<section id="dashboard" ng-controller="dashboardCtrl">
+			<b>Welcome to, {{ user.name }}!</b>
+			<br><br><br>
+			<div class="row">
+				<div class="small-12 medium-6 large-4 column">
+					<a href="about" class="navigation">
+						<i class="fa fa-building"></i>
+						<span class="text">
+							Manage About
+						</span>
+					</a>
+				</div>
+				<div class="small-12 medium-6 large-4 column">
+					<a href="service" class="navigation">
+						<i class="fa fa-institution"></i>
+						<span class="text">
+							Manage Services
+						</span>
+					</a>
+				</div>
+				<div class="small-12 medium-6 large-4 column">
+					<a href="contact" class="navigation">
+						<i class="fa fa-paper-plane"></i>
+						<span class="text">
+							Manage Contacts
+						</span>
+					</a>
+				</div>
+				<div class="small-12 medium-6 large-4 column left">
+					<a href="users" class="navigation">
+						<i class="fa fa-users"></i>
+						<span class="text">
+							Manage Users
+						</span>
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+	</main>
+</div>

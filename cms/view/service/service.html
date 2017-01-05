@@ -1,0 +1,48 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="{{ url }}" class="list-view">
+			<h1 class="page-title">{{ module }}</h1>
+			<div class="row">
+				<div class="small-3">
+					<a href="{{ url }}/add" class="add">
+						<i class="fa fa-plus"></i>
+						<br/>
+						Add Service
+					</a>
+				</div>
+			</div>
+			<div class="row list box">
+				<div class="small-12">
+					<h2 class="title">Registered Pages</h2>
+				</div>
+				<table class="table small-12">
+					<thead>
+						<tr>
+							<th class="text-center">#</th>
+							<th class="text-left">Title</th>
+							<th class="text-left">Creation</th>
+							<th class="text-center">Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="page in pages">
+							<td class="text-center">
+								<input type="checkbox" name="select" class="noMargin">
+							</td>
+							<td class="text-left">{{ page.title }}</td>
+							<td class="text-left"> {{ page.created_at }}</td>
+							<td class="text-center">
+								<a href="{{ url }}/{{ page.id }}" class="editar" title="Edit"><i class="fa fa-edit"></i></a>
+								<a href="{{ url }}/{{ page.id }}" class="editar" title="Remove" delete id="{{ page.id }}" url="{{ url }}"><i class="fa fa-trash"></i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+	</main>
+</div>

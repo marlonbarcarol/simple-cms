@@ -1,0 +1,32 @@
+@import '_components/common';
+@import '_components/menu';
+@import '_components/dashboard';
+@import '_components/login';
+
+
+@import '_components/list-view';
+@import '_components/add-view';
+
+/* USERS */
+@import '_components/user/user';
+@import '_components/user/user-add';
+@import '_components/user/user-edit';
+
+/* ABOUT */
+@import '_components/about/about';
+@import '_components/about/about-add';
+@import '_components/about/about-edit';
+
+/* SERVICES */
+@import '_components/service/service';
+@import '_components/service/service-add';
+@import '_components/service/service-edit';
+
+/* CONTACT */
+@import '_components/contact/contact';
+@import '_components/contact/contact-add';
+@import '_components/contact/contact-edit';
+
+
+
+

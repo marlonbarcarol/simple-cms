@@ -1,0 +1,35 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="usuario" class="add-view">
+			<h1 class="page-title">Cadastro de usuário</h1>
+
+			<div class="box">
+				<h2 class="title">Preencha o formulário para cadastrar o usuário</h2>
+				<form ng-submit="addRegistry('user', formData)">
+					<ul class="noList">
+						<li>
+							<input type="text" ng-model="formData.user" name="user" placeholder="Usuário"> <span class="description">O usuário será usado para fazer o login no CMS</span>
+						</li>
+						<li>
+							<input type="password" ng-model="formData.password" name="password" placeholder="Senha"> <span class="description">A senha deve haver no mínimo 6 carácteres</span>
+						</li>
+						<li>
+							<input type="text" ng-model="formData.name" name="name" placeholder="Nome do usuário"> <span class="description">Preencha com o nome de do usuário</span>
+						</li>
+						<li>
+							<input type="text" name="email" ng-model="formData.email" placeholder="E-mail"> <span class="description">Preencha com o e-mail do usuário</span>
+						</li>
+					</ul>
+					<br/>
+					<button class="button success">Cadastrar</button>
+					<a href="javascript: window.history.back()" class="button">Cancelar</a>
+				</form>
+				<div class="message"></div>
+			</div>
+		</section>
+
+	</main>
+</div>

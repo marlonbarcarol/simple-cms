@@ -1,0 +1,38 @@
+<aside id="sidebar-menu" class="column small-12 medium-3 large-2" ng-include="'view/menu.html'"></aside>
+
+<div class="route-loading" route-loading></div>
+<div id="page" class="column small-12 medium-9 large-10" ng-if='!isRouteLoading'>
+	<main role="main">
+		<section id="{{ url }}-edit" class="add-view">
+			<h1 class="page-title">{{ module }}</h1>
+
+			<div class="box">
+				<h2 class="title">Edição - {{ module }}.</h2>
+				<form ng-submit="editRegistry(url, registry)">
+					<ul class="noList">
+						<li>
+							<span class="description"><b>Nome </b></span>
+							<input type="text" ng-model="registry.nome" name="nome" placeholder="Nome" class="input-large" ng-disabled="true">
+							<br clear="all">
+							<span class="description"><b>Telefone </b></span>
+							<input type="text" ng-model="registry.telefone" name="telefone" placeholder="Telefone" class="input-large" ng-disabled="true">
+							<br clear="all">
+							<span class="description"><b>E-mail </b></span>
+							<input type="text" ng-model="registry.email" name="email" placeholder="E-mail" class="input-large" ng-disabled="true">
+						</li>
+						<li>
+							<span class="description"><b>Mensagem </b></span>
+							<textarea ng-model="registry.mensagem" ng-disabled="true" class="input-large" style="height: 180px;"></textarea>
+							<br/>
+						</li>
+					</ul>
+					<br/>
+					<!-- <button class="button success">Editar</button> -->
+					<a href="javascript: window.history.back()" class="button">Voltar</a>
+				</form>
+				<div class="message"></div>
+			</div>
+		</section>
+		
+	</main>
+</div>
