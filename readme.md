@@ -1,26 +1,25 @@
-### Simple CMS
+## Simple CMS
 Simples CMS is basically an API using Laravel and AngularJS for front end.
 
 ### Installing back-end(API)
 Access "api" folder and run the following commands:
-	```
-		composer install --dev
-	```
+
+~~~
+composer install --dev
+~~~
+
 Import the database structure using a file called "cms-database.sql" on your database and configure the database name and credentials in ".env" file.
 
 ### Installing Front End
 Access "cms" folder and run the following commands:
-	```
-		npm install
-		
-		bower install
-		
-		grunt lib // to concat and minify library files
-		
-		grunt custom // to concat and minify library files
-		
-		grunt //Init as watcher(only watch the custom files, same files as grunt custom)
-	```
+
+~~~
+npm install
+bower install
+grunt lib // to concat and minify library files
+grunt custom // to concat and minify library files
+grunt //Init as watcher(only watch the custom files, same files as grunt custom)
+~~~
 
 ### Access	
 API:
